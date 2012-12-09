@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BB2D6121674D3E0008A2D80 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB2D6111674D3E0008A2D80 /* Cocoa.framework */; };
+		7BB2D6141674D3E0008A2D80 /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB2D6131674D3E0008A2D80 /* AppleScriptObjC.framework */; };
+		7BB2D61E1674D3E0008A2D80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D61C1674D3E0008A2D80 /* InfoPlist.strings */; };
+		7BB2D6201674D3E0008A2D80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB2D61F1674D3E0008A2D80 /* main.m */; };
+		7BB2D6241674D3E0008A2D80 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D6221674D3E0008A2D80 /* Credits.rtf */; };
+		7BB2D6261674D3E0008A2D80 /* FLAppDelegate.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 7BB2D6251674D3E0008A2D80 /* FLAppDelegate.applescript */; };
+		7BB2D6291674D3E0008A2D80 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D6271674D3E0008A2D80 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7BB2D60D1674D3E0008A2D80 /* Mini iTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini iTunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BB2D6111674D3E0008A2D80 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7BB2D6131674D3E0008A2D80 /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
+		7BB2D6161674D3E0008A2D80 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7BB2D6171674D3E0008A2D80 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7BB2D6181674D3E0008A2D80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7BB2D61B1674D3E0008A2D80 /* Mini iTunes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mini iTunes-Info.plist"; sourceTree = "<group>"; };
+		7BB2D61D1674D3E0008A2D80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7BB2D61F1674D3E0008A2D80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7BB2D6211674D3E0008A2D80 /* Mini iTunes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mini iTunes-Prefix.pch"; sourceTree = "<group>"; };
+		7BB2D6231674D3E0008A2D80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		7BB2D6251674D3E0008A2D80 /* FLAppDelegate.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = FLAppDelegate.applescript; sourceTree = "<group>"; };
+		7BB2D6281674D3E0008A2D80 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BB2D60A1674D3E0008A2D80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB2D6121674D3E0008A2D80 /* Cocoa.framework in Frameworks */,
+				7BB2D6141674D3E0008A2D80 /* AppleScriptObjC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BB2D6021674D3E0008A2D80 = {
+			isa = PBXGroup;
+			children = (
+				7BB2D6191674D3E0008A2D80 /* Mini iTunes */,
+				7BB2D6101674D3E0008A2D80 /* Frameworks */,
+				7BB2D60E1674D3E0008A2D80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BB2D60E1674D3E0008A2D80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BB2D60D1674D3E0008A2D80 /* Mini iTunes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BB2D6101674D3E0008A2D80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BB2D6111674D3E0008A2D80 /* Cocoa.framework */,
+				7BB2D6131674D3E0008A2D80 /* AppleScriptObjC.framework */,
+				7BB2D6151674D3E0008A2D80 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BB2D6151674D3E0008A2D80 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BB2D6161674D3E0008A2D80 /* AppKit.framework */,
+				7BB2D6171674D3E0008A2D80 /* CoreData.framework */,
+				7BB2D6181674D3E0008A2D80 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7BB2D6191674D3E0008A2D80 /* Mini iTunes */ = {
+			isa = PBXGroup;
+			children = (
+				7BB2D6251674D3E0008A2D80 /* FLAppDelegate.applescript */,
+				7BB2D6271674D3E0008A2D80 /* MainMenu.xib */,
+				7BB2D61A1674D3E0008A2D80 /* Supporting Files */,
+			);
+			path = "Mini iTunes";
+			sourceTree = "<group>";
+		};
+		7BB2D61A1674D3E0008A2D80 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BB2D61B1674D3E0008A2D80 /* Mini iTunes-Info.plist */,
+				7BB2D61C1674D3E0008A2D80 /* InfoPlist.strings */,
+				7BB2D61F1674D3E0008A2D80 /* main.m */,
+				7BB2D6211674D3E0008A2D80 /* Mini iTunes-Prefix.pch */,
+				7BB2D6221674D3E0008A2D80 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BB2D60C1674D3E0008A2D80 /* Mini iTunes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BB2D62C1674D3E0008A2D80 /* Build configuration list for PBXNativeTarget "Mini iTunes" */;
+			buildPhases = (
+				7BB2D6091674D3E0008A2D80 /* Sources */,
+				7BB2D60A1674D3E0008A2D80 /* Frameworks */,
+				7BB2D60B1674D3E0008A2D80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mini iTunes";
+			productName = "Mini iTunes";
+			productReference = 7BB2D60D1674D3E0008A2D80 /* Mini iTunes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BB2D6041674D3E0008A2D80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FL;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Frost Land";
+			};
+			buildConfigurationList = 7BB2D6071674D3E0008A2D80 /* Build configuration list for PBXProject "Mini iTunes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7BB2D6021674D3E0008A2D80;
+			productRefGroup = 7BB2D60E1674D3E0008A2D80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BB2D60C1674D3E0008A2D80 /* Mini iTunes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BB2D60B1674D3E0008A2D80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB2D61E1674D3E0008A2D80 /* InfoPlist.strings in Resources */,
+				7BB2D6241674D3E0008A2D80 /* Credits.rtf in Resources */,
+				7BB2D6291674D3E0008A2D80 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BB2D6091674D3E0008A2D80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB2D6201674D3E0008A2D80 /* main.m in Sources */,
+				7BB2D6261674D3E0008A2D80 /* FLAppDelegate.applescript in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7BB2D61C1674D3E0008A2D80 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BB2D61D1674D3E0008A2D80 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7BB2D6221674D3E0008A2D80 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BB2D6231674D3E0008A2D80 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		7BB2D6271674D3E0008A2D80 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BB2D6281674D3E0008A2D80 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BB2D62A1674D3E0008A2D80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7BB2D62B1674D3E0008A2D80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7BB2D62D1674D3E0008A2D80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mini iTunes/Mini iTunes-Prefix.pch";
+				INFOPLIST_FILE = "Mini iTunes/Mini iTunes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7BB2D62E1674D3E0008A2D80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mini iTunes/Mini iTunes-Prefix.pch";
+				INFOPLIST_FILE = "Mini iTunes/Mini iTunes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BB2D6071674D3E0008A2D80 /* Build configuration list for PBXProject "Mini iTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BB2D62A1674D3E0008A2D80 /* Debug */,
+				7BB2D62B1674D3E0008A2D80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BB2D62C1674D3E0008A2D80 /* Build configuration list for PBXNativeTarget "Mini iTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BB2D62D1674D3E0008A2D80 /* Debug */,
+				7BB2D62E1674D3E0008A2D80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BB2D6041674D3E0008A2D80 /* Project object */;
+}
