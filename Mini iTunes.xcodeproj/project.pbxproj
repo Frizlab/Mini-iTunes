@@ -21,6 +21,8 @@
 		7BB2D63B1674D920008A2D80 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D6351674D920008A2D80 /* pause.png */; };
 		7BB2D63C1674D920008A2D80 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D6361674D920008A2D80 /* play.png */; };
 		7BB2D63D1674D920008A2D80 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D6371674D920008A2D80 /* stop.png */; };
+		7BB2D6421674E4DB008A2D80 /* FLMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB2D6411674E4DB008A2D80 /* FLMainWindowController.m */; };
+		7BB2D6441674E687008A2D80 /* FLMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D6431674E687008A2D80 /* FLMainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,9 @@
 		7BB2D6351674D920008A2D80 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		7BB2D6361674D920008A2D80 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		7BB2D6371674D920008A2D80 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		7BB2D6401674E4DB008A2D80 /* FLMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMainWindowController.h; sourceTree = "<group>"; };
+		7BB2D6411674E4DB008A2D80 /* FLMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMainWindowController.m; sourceTree = "<group>"; };
+		7BB2D6431674E687008A2D80 /* FLMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FLMainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +104,11 @@
 		7BB2D6191674D3E0008A2D80 /* Mini iTunes */ = {
 			isa = PBXGroup;
 			children = (
-				7BB2D6251674D3E0008A2D80 /* FLAppDelegate.applescript */,
 				7BB2D6271674D3E0008A2D80 /* MainMenu.xib */,
+				7BB2D6251674D3E0008A2D80 /* FLAppDelegate.applescript */,
+				7BB2D6431674E687008A2D80 /* FLMainWindow.xib */,
+				7BB2D6401674E4DB008A2D80 /* FLMainWindowController.h */,
+				7BB2D6411674E4DB008A2D80 /* FLMainWindowController.m */,
 				7BB2D61A1674D3E0008A2D80 /* Supporting Files */,
 			);
 			path = "Mini iTunes";
@@ -195,6 +203,7 @@
 				7BB2D63B1674D920008A2D80 /* pause.png in Resources */,
 				7BB2D63C1674D920008A2D80 /* play.png in Resources */,
 				7BB2D63D1674D920008A2D80 /* stop.png in Resources */,
+				7BB2D6441674E687008A2D80 /* FLMainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +216,7 @@
 			files = (
 				7BB2D6201674D3E0008A2D80 /* main.m in Sources */,
 				7BB2D6261674D3E0008A2D80 /* FLAppDelegate.applescript in Sources */,
+				7BB2D6421674E4DB008A2D80 /* FLMainWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
