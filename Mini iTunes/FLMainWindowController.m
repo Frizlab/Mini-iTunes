@@ -17,11 +17,12 @@
 
 @implementation FLMainWindowController
 
-@synthesize buttonPrevious;
-
 - (id)initWithWindow:(NSWindow *)window
 {
 	if ((self = [super initWithWindow:window]) != nil) {
+		self.iTunesLaunched = NO;
+		self.volume = 0.;
+		self.playing = NO;
 	}
 	
 	return self;
@@ -34,9 +35,20 @@
 	/* Let's init the UI */
 }
 
-- (void)toto
+- (void)dumpInfos
 {
-	NSLog(@"ok");
+	NSLog(@"Dumping Controller Infos:");
+	NSLog(@"   iTunes Launched? %d", self.iTunesLaunched);
+	NSLog(@"   Playing? %d", self.playing);
+	NSLog(@"   Volume = %g", self.volume);
+}
+
+#pragma mark Overridden Properties
+
+- (NSString *)curTrackInfos
+{
+	if (!self.playing) return nil;
+	return @"The Track Infos";
 }
 
 @end
