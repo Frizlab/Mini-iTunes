@@ -426,10 +426,30 @@
 							<string key="NSLabel">value: self.playPosition</string>
 							<string key="NSBinding">value</string>
 							<string key="NSKeyPath">self.playPosition</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSConditionallySetsEnabled</string>
+								<boolean value="NO" key="NS.object.0"/>
+							</object>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">83</int>
+					<int key="connectionID">88</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: self.curTrackInfos</string>
+						<reference key="source" ref="349861533"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="349861533"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: self.curTrackInfos</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">self.curTrackInfos</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">86</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -482,10 +502,14 @@
 							<string key="NSLabel">value: self.curTrackName</string>
 							<string key="NSBinding">value</string>
 							<string key="NSKeyPath">self.curTrackName</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSNullPlaceholder</string>
+								<string key="NS.object.0">No Track Playing</string>
+							</object>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">82</int>
+					<int key="connectionID">87</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -537,15 +561,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">enabled2: self.playing</string>
+						<string key="label">enabled2: self.hasPlayerPosition</string>
 						<reference key="source" ref="632955550"/>
 						<reference key="destination" ref="1001"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="632955550"/>
 							<reference key="NSDestination" ref="1001"/>
-							<string key="NSLabel">enabled2: self.playing</string>
+							<string key="NSLabel">enabled2: self.hasPlayerPosition</string>
 							<string key="NSBinding">enabled2</string>
-							<string key="NSKeyPath">self.playing</string>
+							<string key="NSKeyPath">self.hasPlayerPosition</string>
 							<dictionary key="NSOptions">
 								<integer value="-1" key="NSMultipleValuesPlaceholder"/>
 								<integer value="-1" key="NSNoSelectionPlaceholder"/>
@@ -556,7 +580,7 @@
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">73</int>
+					<int key="connectionID">85</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -575,16 +599,24 @@
 					<int key="connectionID">63</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">nextKeyView</string>
+						<reference key="source" ref="634440411"/>
+						<reference key="destination" ref="77426680"/>
+					</object>
+					<int key="connectionID">68</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">enabled2: self.playing</string>
+						<string key="label">enabled2: self.hasPlayerPosition</string>
 						<reference key="source" ref="634440411"/>
 						<reference key="destination" ref="1001"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="634440411"/>
 							<reference key="NSDestination" ref="1001"/>
-							<string key="NSLabel">enabled2: self.playing</string>
+							<string key="NSLabel">enabled2: self.hasPlayerPosition</string>
 							<string key="NSBinding">enabled2</string>
-							<string key="NSKeyPath">self.playing</string>
+							<string key="NSKeyPath">self.hasPlayerPosition</string>
 							<dictionary key="NSOptions">
 								<integer value="-1" key="NSMultipleValuesPlaceholder"/>
 								<integer value="-1" key="NSNoSelectionPlaceholder"/>
@@ -595,15 +627,7 @@
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">64</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">nextKeyView</string>
-						<reference key="source" ref="634440411"/>
-						<reference key="destination" ref="77426680"/>
-					</object>
-					<int key="connectionID">68</int>
+					<int key="connectionID">84</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1622,7 +1646,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">83</int>
+			<int key="maxID">88</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

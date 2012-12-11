@@ -13,9 +13,11 @@ script FLAppDelegate
 	
 	-- Class "imports"
 	property NSTimer: class "NSTimer"
+	property NSUserDefaults: class "NSUserDefaults"
 	property FLMainWindowController: class "FLMainWindowController"
 	
 	-- Actual Properties
+	property standardUserDefaults: NSUserDefaults's standardUserDefaults
 	property mainWindowController: null
 	
 	-- -- -- Methods -- -- --
@@ -26,6 +28,8 @@ script FLAppDelegate
 	end isiTunesLaunched
 
 	on iTunesStatusUpdate_(timer)
+		-- mainWindowController's dumpInfos()
+		
 		if my isiTunesLaunched() is false then
 			-- Don't set the var using:
 			--   mainWindowController's setiTunesLaunched_(0)
@@ -39,21 +43,35 @@ script FLAppDelegate
 		
 		-- We can communicate with iTunes here
 		tell application id "com.apple.iTunes"
-			set is_paused to (player state is paused)
-			set is_playing to (player state is playing)
+			-- Setting iTunes Volume
+			set mainWindowController's volume to sound volume / 100
 			
-			-- Don't set the var using:
-			--   set mainWindowController's playing to is_playing
-			-- If you do, you'll get a compilation error because the compiler
-			-- won't understand you're trying to set the playing property
-			-- of the Main Window Controller and will try to get the playing
-			-- property of the iTunes app and fail
-			mainWindowController's setPlaying_(is_playing)
-			
-			if (is_playing) then
-				set mainWindowController's playPosition to 1
+			-- Setting Player State
+			if (player state is stopped)
+				set mainWindowController's playerState to 0
+			else if (player state is playing)
+				set mainWindowController's playerState to 1
+			else if (player state is paused)
+				set mainWindowController's playerState to 2
+			else if (player state is fast forwarding)
+				set mainWindowController's playerState to 3
+			else if (player state is rewinding)
+				set mainWindowController's playerState to 4
 			else
-				set mainWindowController's playPosition to 0
+				log "*** Warning: Got unknown player state"
+				set mainWindowController's playerState to 0
+			end if
+			
+			if (mainWindowController's hasPlayerPosition) then
+				set mainWindowController's playPosition to 1
+				set mainWindowController's curTrackName to name of current track
+				set mainWindowController's curTrackAlbum to album of current track
+				set mainWindowController's curTrackArtist to artist of current track
+			else
+				-- nil --> missing value
+				set mainWindowController's curTrackName to missing value
+				set mainWindowController's curTrackAlbum to missing value
+				set mainWindowController's curTrackArtist to missing value
 			end if
 		end tell
 	end iTunesStatusUpdate_

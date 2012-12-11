@@ -8,6 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 
+
+typedef enum FLiTunesPlayerState: NSUInteger {
+	FLPlayerStateStopped = 0,
+	FLPlayerStatePlaying = 1,
+	FLPlayerStatePaused = 2,
+	FLPlayerStateFastForwarding = 3,
+	FLPlayerStateRewinding = 4
+} FLiTunesPlayerState;
+
+
 @interface FLMainWindowController : NSWindowController <NSWindowDelegate>
 
 @property(retain) IBOutlet NSSlider *sliderVolume;
@@ -18,7 +28,8 @@
 
 /* Between 0. and 1. */
 @property(assign) CGFloat volume;
-@property(assign) BOOL playing;
+@property(assign) FLiTunesPlayerState playerState;
+@property(readonly) BOOL hasPlayerPosition; /* Computed from playerState */
 /* Between 0. and 1. */
 @property(assign) CGFloat playPosition;
 
