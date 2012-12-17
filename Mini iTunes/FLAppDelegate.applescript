@@ -74,7 +74,7 @@ script FLAppDelegate
 			end if
 			
 			if (mainWindowController's hasPlayerPosition) then
-				set mainWindowController's playPosition to 1
+				set mainWindowController's playPosition to player position / duration of current track
 				set mainWindowController's curTrackName to name of current track
 				set mainWindowController's curTrackAlbum to album of current track
 				set mainWindowController's curTrackArtist to artist of current track
