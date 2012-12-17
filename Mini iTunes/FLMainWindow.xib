@@ -187,6 +187,7 @@
 								</object>
 							</object>
 							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+							<bool key="NSControlAutosetMaxLayoutWidth">YES</bool>
 						</object>
 						<object class="NSTextField" id="349861533">
 							<reference key="NSNextResponder" ref="971545382"/>
@@ -212,6 +213,7 @@
 								<reference key="NSTextColor" ref="346019108"/>
 							</object>
 							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+							<bool key="NSControlAutosetMaxLayoutWidth">YES</bool>
 						</object>
 						<object class="NSSlider" id="77426680">
 							<reference key="NSNextResponder" ref="971545382"/>
@@ -337,7 +339,6 @@
 							<string key="NSFrame">{{242, 9}, {50, 11}}</string>
 							<reference key="NSSuperview" ref="971545382"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="601615555">

@@ -72,7 +72,7 @@
 - (NSString *)curTrackInfos
 {
 	if (!self.hasPlayerPosition) return nil;
-	return [NSString stringWithFormat:@"%@%@%@", self.curTrackArtist, (self.curTrackArtist != nil && self.curTrackAlbum != nil)? @" — ": @"", self.curTrackAlbum];
+	return [NSString stringWithFormat:@"%@%@%@", self.curTrackArtist, (self.curTrackArtist.length > 0 && self.curTrackAlbum.length > 0)? @" — ": @"", self.curTrackAlbum];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
