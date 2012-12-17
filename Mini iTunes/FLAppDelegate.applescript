@@ -13,8 +13,13 @@ script FLAppDelegate
 	
 	-- Class "imports"
 	property NSTimer: class "NSTimer"
+	property NSApplication: class "NSApplication"
 	property NSUserDefaults: class "NSUserDefaults"
+	property NSMutableDictionary: class "NSMutableDictionary"
 	property FLMainWindowController: class "FLMainWindowController"
+	
+	-- Constants
+	property FL_UDK_QUIT_WITH_ITUNES: "Quit With iTunes"
 	
 	-- Actual Properties
 	property standardUserDefaults: NSUserDefaults's standardUserDefaults
@@ -22,15 +27,21 @@ script FLAppDelegate
 	
 	-- -- -- Methods -- -- --
 	
+	-- -- Class Methods -- --
+	
 	-- -- Private Methods -- --
-	to isiTunesLaunched()
+	on isiTunesLaunched()
 		tell application "System Events" to return (exists (some process whose name is "iTunes"))
 	end isiTunesLaunched
-
+	
 	on iTunesStatusUpdate_(timer)
 		-- mainWindowController's dumpInfos()
 		
-		if my isiTunesLaunched() is false then
+		if isiTunesLaunched() is false then
+			if (standardUserDefaults's boolForKey_(FL_UDK_QUIT_WITH_ITUNES))
+				NSApplication's sharedApplication's terminate_(missing value)
+			end if
+			
 			-- Don't set the var using:
 			--   mainWindowController's setiTunesLaunched_(0)
 			-- for the bindings to work. Even though the setter is re-defined
@@ -68,7 +79,7 @@ script FLAppDelegate
 				set mainWindowController's curTrackAlbum to album of current track
 				set mainWindowController's curTrackArtist to artist of current track
 			else
-				-- nil --> missing value
+				-- nil in Obj-C --> missing value in AppleScript
 				set mainWindowController's curTrackName to missing value
 				set mainWindowController's curTrackAlbum to missing value
 				set mainWindowController's curTrackArtist to missing value
@@ -79,6 +90,13 @@ script FLAppDelegate
 	-- -- Application Delegate Implementation -- --
 	
 	on applicationWillFinishLaunching_(aNotification)
+		-- Registering the defaults
+		set defaultValues to NSMutableDictionary's dictionary()
+		
+		defaultValues's setValue_forKey_(true, FL_UDK_QUIT_WITH_ITUNES)
+		
+		standardUserDefaults's registerDefaults_(defaultValues)
+		
 		-- Creating the main window controller and showing its window
 		set mainWindowController to FLMainWindowController's alloc()'s initWithWindowNibName_("FLMainWindow")
 		mainWindowController's showWindow_(null)
