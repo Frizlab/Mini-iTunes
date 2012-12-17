@@ -30,8 +30,10 @@ typedef enum FLiTunesPlayerState: NSUInteger {
 @property(assign) CGFloat volume;
 @property(assign) FLiTunesPlayerState playerState;
 @property(readonly) BOOL hasPlayerPosition; /* Computed from playerState */
-/* Between 0. and 1. */
+/* In seconds from the beginning of the track */
 @property(assign) CGFloat playPosition;
+/* In seconds */
+@property(assign) CGFloat trackLength;
 
 @property(retain) NSString *curTrackName;
 @property(retain) NSString *curTrackAlbum;

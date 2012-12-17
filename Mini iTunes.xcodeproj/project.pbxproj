@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B8E3DCD167F336E00CBC21C /* FLPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E3DCB167F336E00CBC21C /* FLPreferencesWindowController.m */; };
+		7B8E3DCE167F336E00CBC21C /* FLPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E3DCC167F336E00CBC21C /* FLPreferencesWindow.xib */; };
 		7BB2D6121674D3E0008A2D80 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB2D6111674D3E0008A2D80 /* Cocoa.framework */; };
 		7BB2D6141674D3E0008A2D80 /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB2D6131674D3E0008A2D80 /* AppleScriptObjC.framework */; };
 		7BB2D61E1674D3E0008A2D80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D61C1674D3E0008A2D80 /* InfoPlist.strings */; };
@@ -26,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B8E3DCA167F336E00CBC21C /* FLPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLPreferencesWindowController.h; sourceTree = "<group>"; };
+		7B8E3DCB167F336E00CBC21C /* FLPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLPreferencesWindowController.m; sourceTree = "<group>"; };
+		7B8E3DCC167F336E00CBC21C /* FLPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FLPreferencesWindow.xib; sourceTree = "<group>"; };
 		7BB2D60D1674D3E0008A2D80 /* Mini iTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini iTunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB2D6111674D3E0008A2D80 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7BB2D6131674D3E0008A2D80 /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
@@ -109,6 +114,9 @@
 				7BB2D6431674E687008A2D80 /* FLMainWindow.xib */,
 				7BB2D6401674E4DB008A2D80 /* FLMainWindowController.h */,
 				7BB2D6411674E4DB008A2D80 /* FLMainWindowController.m */,
+				7B8E3DCC167F336E00CBC21C /* FLPreferencesWindow.xib */,
+				7B8E3DCA167F336E00CBC21C /* FLPreferencesWindowController.h */,
+				7B8E3DCB167F336E00CBC21C /* FLPreferencesWindowController.m */,
 				7BB2D61A1674D3E0008A2D80 /* Supporting Files */,
 			);
 			path = "Mini iTunes";
@@ -204,6 +212,7 @@
 				7BB2D63C1674D920008A2D80 /* play.png in Resources */,
 				7BB2D63D1674D920008A2D80 /* stop.png in Resources */,
 				7BB2D6441674E687008A2D80 /* FLMainWindow.xib in Resources */,
+				7B8E3DCE167F336E00CBC21C /* FLPreferencesWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +226,7 @@
 				7BB2D6201674D3E0008A2D80 /* main.m in Sources */,
 				7BB2D6261674D3E0008A2D80 /* FLAppDelegate.applescript in Sources */,
 				7BB2D6421674E4DB008A2D80 /* FLMainWindowController.m in Sources */,
+				7B8E3DCD167F336E00CBC21C /* FLPreferencesWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +354,7 @@
 				7BB2D62E1674D3E0008A2D80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
