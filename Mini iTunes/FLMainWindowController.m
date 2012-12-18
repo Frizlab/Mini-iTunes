@@ -25,8 +25,13 @@
 		self.iTunesLaunched = NO;
 		self.playerState = FLPlayerStateStopped;
 		
-		[self addObserver:self forKeyPath:@"curTrackAlbum" options:NSKeyValueObservingOptionPrior context:NULL];
-		[self addObserver:self forKeyPath:@"curTrackArtist" options:NSKeyValueObservingOptionPrior context:NULL];
+		keyPathComputation = [@{
+			@"curTrackAlbum": @[@"curTrackInfos"],
+			@"curTrackAlbum": @[@"curTrackArtist"],
+			@"playerState":   @[@"imagePlayButton"]
+		} retain];
+		for (NSString *key in keyPathComputation.allKeys)
+			[self addObserver:self forKeyPath:key options:NSKeyValueObservingOptionPrior context:NULL];
 	}
 	
 	return self;
@@ -34,11 +39,14 @@
 
 - (void)dealloc
 {
+	for (NSString *key in keyPathComputation.allKeys)
+		[self removeObserver:self forKeyPath:key];
+	
+	[keyPathComputation release];
+	
+	
 	self.sliderVolume = nil;
 	self.buttonPrevious = nil;
-	
-	[self removeObserver:self forKeyPath:@"curTrackAlbum"];
-	[self removeObserver:self forKeyPath:@"curTrackArtist"];
 	
 	self.curTrackName = nil;
 	self.curTrackAlbum = nil;
@@ -84,6 +92,22 @@
 
 #pragma mark - Overridden Properties
 
+- (NSImage *)imagePlayButton
+{
+	switch (self.playerState) {
+		case FLPlayerStatePlaying: /* No Break */
+		case FLPlayerStateFastForwarding: /* No Break */
+		case FLPlayerStateRewinding: /* No Break */
+			return [NSImage imageNamed:@"pause.png"];
+		case FLPlayerStateStopped:
+		case FLPlayerStatePaused:
+			return [NSImage imageNamed:@"play.png"];
+		default:
+			NSLog(@"*** Warning: Unknown player state %d", (int)self.playerState);
+			return nil;
+	}
+}
+
 - (BOOL)hasPlayerPosition
 {
 	return (self.playerState != FLPlayerStateStopped);
@@ -97,8 +121,13 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	if ([[change objectForKey:NSKeyValueChangeNotificationIsPriorKey] boolValue]) [self willChangeValueForKey:@"curTrackInfos"];
-	else                                                                          [self didChangeValueForKey:@"curTrackInfos"];
+	if ([[change objectForKey:NSKeyValueChangeNotificationIsPriorKey] boolValue]) {
+		for (NSString *key in [keyPathComputation objectForKey:keyPath])
+			[self willChangeValueForKey:key];
+	} else {
+		for (NSString *key in [keyPathComputation objectForKey:keyPath])
+			[self didChangeValueForKey:key];
+	}
 }
 
 @end

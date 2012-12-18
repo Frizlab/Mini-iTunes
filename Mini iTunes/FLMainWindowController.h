@@ -22,6 +22,9 @@ typedef enum FLiTunesPlayerState: NSUInteger {
 
 @interface FLMainWindowController : NSWindowController <NSWindowDelegate> {
 	FLiTunesControllerProxy *iTunesController;
+	
+@private
+	NSDictionary *keyPathComputation;
 }
 
 @property(retain) IBOutlet NSSlider *sliderVolume;
@@ -34,6 +37,8 @@ typedef enum FLiTunesPlayerState: NSUInteger {
 @property(assign) CGFloat volume;
 @property(assign) FLiTunesPlayerState playerState;
 @property(readonly) BOOL hasPlayerPosition; /* Computed from playerState */
+@property(retain, readonly) NSImage *imagePlayButton; /* Computed from playerState */
+
 /* In seconds from the beginning of the track */
 @property(assign) CGFloat playPosition;
 /* In seconds */
