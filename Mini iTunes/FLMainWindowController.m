@@ -9,7 +9,6 @@
 #import "FLMainWindowController.h"
 
 
-
 @interface FLMainWindowController ()
 
 @end
@@ -20,6 +19,8 @@
 - (id)initWithWindow:(NSWindow *)window
 {
 	if ((self = [super initWithWindow:window]) != nil) {
+		iTunesController = [FLiTunesControllerProxy new];
+		
 		self.volume = 0.;
 		self.iTunesLaunched = NO;
 		self.playerState = FLPlayerStateStopped;
@@ -43,6 +44,8 @@
 	self.curTrackAlbum = nil;
 	self.curTrackArtist = nil;
 	
+	[iTunesController release];
+	
 	[super dealloc];
 }
 
@@ -62,7 +65,24 @@
 	NSLog(@"   Current Track Name = %@", self.curTrackName);
 }
 
-#pragma mark Overridden Properties
+#pragma mark - Actions
+
+- (IBAction)playpauseAction:(id)sender
+{
+	[iTunesController playpause];
+}
+
+- (IBAction)previousAction:(id)sender
+{
+	[iTunesController playPrevious];
+}
+
+- (IBAction)nextAction:(id)sender
+{
+	[iTunesController playNext];
+}
+
+#pragma mark - Overridden Properties
 
 - (BOOL)hasPlayerPosition
 {

@@ -1,9 +1,9 @@
 --
---  FLAppDelegate.applescript
---  Mini iTunes
+-- FLAppDelegate.applescript
+-- Mini iTunes
 --
---  Created by François LAMBOLEY on 12/9/12.
---  Copyright (c) 2012 Frost Land. All rights reserved.
+-- Created by François LAMBOLEY on 12/9/12.
+-- Copyright (c) 2012 Frost Land. All rights reserved.
 --
 
 script FLAppDelegate
@@ -18,6 +18,7 @@ script FLAppDelegate
 	property NSMutableDictionary: class "NSMutableDictionary"
 	property FLMainWindowController: class "FLMainWindowController"
 	property FLPreferencesWindowController: class "FLPreferencesWindowController"
+	property FLUtils: class "FLUtils"
 	
 	-- Constants
 	property FL_UDK_LAUNCH_ITUNES: "FL Launch iTunes"
@@ -44,17 +45,34 @@ script FLAppDelegate
 	
 	-- -- Class Methods -- --
 	
+	on initialize()
+		parent's initialize()
+		
+		-- Registering the defaults
+		set defaultValues to NSMutableDictionary's dictionary()
+		
+		defaultValues's setValue_forKey_(true, FL_UDK_LAUNCH_ITUNES)
+		defaultValues's setValue_forKey_(true, FL_UDK_QUIT_WITH_ITUNES)
+		
+		standardUserDefaults's registerDefaults_(defaultValues)
+	end initialize
+	
 	-- -- Private Methods -- --
-	on isiTunesLaunched()
-		tell application "System Events" to return (exists (some process whose name is "iTunes"))
-	end isiTunesLaunched
 	
 	on iTunesStatusUpdate_(timer)
 		-- mainWindowController's dumpInfos()
 		
-		if isiTunesLaunched() is false then
-			if (standardUserDefaults's boolForKey_(FL_UDK_QUIT_WITH_ITUNES))
-				NSApplication's sharedApplication's terminate_(missing value)
+		if FLUtils's isiTunesLaunched() is false then
+			if timer is missing value and standardUserDefaults's boolForKey_(FL_UDK_LAUNCH_ITUNES) then
+				-- We're at first launch of the app and we should launch iTunes
+				tell application id "com.apple.iTunes"
+					activate
+				end tell
+				return
+			else
+				if (standardUserDefaults's boolForKey_(FL_UDK_QUIT_WITH_ITUNES)) then
+					NSApplication's sharedApplication's terminate_(missing value)
+				end if
 			end if
 			
 			-- Don't set the var using:
@@ -96,6 +114,8 @@ script FLAppDelegate
 				set mainWindowController's curTrackArtist to artist of current track
 			else
 				-- nil in Obj-C --> missing value in AppleScript
+				set mainWindowController's trackLength to 0
+				set mainWindowController's playPosition to 0
 				set mainWindowController's curTrackName to missing value
 				set mainWindowController's curTrackAlbum to missing value
 				set mainWindowController's curTrackArtist to missing value
@@ -106,20 +126,12 @@ script FLAppDelegate
 	-- -- Application Delegate Implementation -- --
 	
 	on applicationWillFinishLaunching_(aNotification)
-		-- Registering the defaults
-		set defaultValues to NSMutableDictionary's dictionary()
-		
-		defaultValues's setValue_forKey_(true, FL_UDK_LAUNCH_ITUNES)
-		defaultValues's setValue_forKey_(true, FL_UDK_QUIT_WITH_ITUNES)
-		
-		standardUserDefaults's registerDefaults_(defaultValues)
-		
 		-- Creating the main window controller and showing its window
 		set mainWindowController to FLMainWindowController's alloc()'s initWithWindowNibName_("FLMainWindow")
 		my showMainWindow_(me)
 		
 		-- Setting up iTunes Status Update timer
-		my iTunesStatusUpdate_(null)
+		my iTunesStatusUpdate_(missing value)
 		NSTimer's scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_(.25, me, "iTunesStatusUpdate:", null, 1)
 	end applicationWillFinishLaunching_
 

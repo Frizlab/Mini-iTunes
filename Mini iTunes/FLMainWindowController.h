@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "FLiTunesControllerProxy.h"
+
 
 typedef enum FLiTunesPlayerState: NSUInteger {
 	FLPlayerStateStopped = 0,
@@ -18,7 +20,9 @@ typedef enum FLiTunesPlayerState: NSUInteger {
 } FLiTunesPlayerState;
 
 
-@interface FLMainWindowController : NSWindowController <NSWindowDelegate>
+@interface FLMainWindowController : NSWindowController <NSWindowDelegate> {
+	FLiTunesControllerProxy *iTunesController;
+}
 
 @property(retain) IBOutlet NSSlider *sliderVolume;
 
@@ -39,5 +43,9 @@ typedef enum FLiTunesPlayerState: NSUInteger {
 @property(retain) NSString *curTrackAlbum;
 @property(retain) NSString *curTrackArtist;
 @property(retain, readonly) NSString *curTrackInfos;
+
+- (IBAction)playpauseAction:(id)sender;
+- (IBAction)previousAction:(id)sender;
+- (IBAction)nextAction:(id)sender;
 
 @end
