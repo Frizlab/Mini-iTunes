@@ -13,6 +13,13 @@
 		7B8E3DD91680537800CBC21C /* FLiTunesController.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E3DD81680537800CBC21C /* FLiTunesController.applescript */; };
 		7B8E3DDB168054DE00CBC21C /* FLUtils.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E3DDA168054DE00CBC21C /* FLUtils.applescript */; };
 		7B8E3DE21680A45C00CBC21C /* FLiTunesControllerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E3DE11680A45C00CBC21C /* FLiTunesControllerProxy.m */; };
+		7B8E3DEE1680DE1600CBC21C /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E3DE71680DE1600CBC21C /* back@2x.png */; };
+		7B8E3DEF1680DE1600CBC21C /* loud_sound@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E3DE81680DE1600CBC21C /* loud_sound@2x.png */; };
+		7B8E3DF01680DE1600CBC21C /* low_sound@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E3DE91680DE1600CBC21C /* low_sound@2x.png */; };
+		7B8E3DF11680DE1600CBC21C /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E3DEA1680DE1600CBC21C /* next@2x.png */; };
+		7B8E3DF21680DE1600CBC21C /* pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E3DEB1680DE1600CBC21C /* pause@2x.png */; };
+		7B8E3DF31680DE1600CBC21C /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E3DEC1680DE1600CBC21C /* play@2x.png */; };
+		7B8E3DF41680DE1600CBC21C /* stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E3DED1680DE1600CBC21C /* stop@2x.png */; };
 		7BB2D6121674D3E0008A2D80 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB2D6111674D3E0008A2D80 /* Cocoa.framework */; };
 		7BB2D6141674D3E0008A2D80 /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB2D6131674D3E0008A2D80 /* AppleScriptObjC.framework */; };
 		7BB2D61E1674D3E0008A2D80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D61C1674D3E0008A2D80 /* InfoPlist.strings */; };
@@ -41,6 +48,13 @@
 		7B8E3DDA168054DE00CBC21C /* FLUtils.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = FLUtils.applescript; sourceTree = "<group>"; };
 		7B8E3DE01680A45C00CBC21C /* FLiTunesControllerProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLiTunesControllerProxy.h; sourceTree = "<group>"; };
 		7B8E3DE11680A45C00CBC21C /* FLiTunesControllerProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLiTunesControllerProxy.m; sourceTree = "<group>"; };
+		7B8E3DE71680DE1600CBC21C /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		7B8E3DE81680DE1600CBC21C /* loud_sound@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loud_sound@2x.png"; sourceTree = "<group>"; };
+		7B8E3DE91680DE1600CBC21C /* low_sound@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "low_sound@2x.png"; sourceTree = "<group>"; };
+		7B8E3DEA1680DE1600CBC21C /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
+		7B8E3DEB1680DE1600CBC21C /* pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause@2x.png"; sourceTree = "<group>"; };
+		7B8E3DEC1680DE1600CBC21C /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
+		7B8E3DED1680DE1600CBC21C /* stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop@2x.png"; sourceTree = "<group>"; };
 		7BB2D60D1674D3E0008A2D80 /* Mini iTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini iTunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB2D6111674D3E0008A2D80 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7BB2D6131674D3E0008A2D80 /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
@@ -155,12 +169,19 @@
 			isa = PBXGroup;
 			children = (
 				7BB2D6301674D7A6008A2D80 /* back.png */,
+				7B8E3DE71680DE1600CBC21C /* back@2x.png */,
 				7BB2D6321674D920008A2D80 /* loud_sound.png */,
+				7B8E3DE81680DE1600CBC21C /* loud_sound@2x.png */,
 				7BB2D6331674D920008A2D80 /* low_sound.png */,
+				7B8E3DE91680DE1600CBC21C /* low_sound@2x.png */,
 				7BB2D6341674D920008A2D80 /* next.png */,
+				7B8E3DEA1680DE1600CBC21C /* next@2x.png */,
 				7BB2D6351674D920008A2D80 /* pause.png */,
+				7B8E3DEB1680DE1600CBC21C /* pause@2x.png */,
 				7BB2D6361674D920008A2D80 /* play.png */,
+				7B8E3DEC1680DE1600CBC21C /* play@2x.png */,
 				7BB2D6371674D920008A2D80 /* stop.png */,
+				7B8E3DED1680DE1600CBC21C /* stop@2x.png */,
 			);
 			path = gfx;
 			sourceTree = "<group>";
@@ -229,6 +250,13 @@
 				7BB2D63D1674D920008A2D80 /* stop.png in Resources */,
 				7BB2D6441674E687008A2D80 /* FLMainWindow.xib in Resources */,
 				7B8E3DCE167F336E00CBC21C /* FLPreferencesWindow.xib in Resources */,
+				7B8E3DEE1680DE1600CBC21C /* back@2x.png in Resources */,
+				7B8E3DEF1680DE1600CBC21C /* loud_sound@2x.png in Resources */,
+				7B8E3DF01680DE1600CBC21C /* low_sound@2x.png in Resources */,
+				7B8E3DF11680DE1600CBC21C /* next@2x.png in Resources */,
+				7B8E3DF21680DE1600CBC21C /* pause@2x.png in Resources */,
+				7B8E3DF31680DE1600CBC21C /* play@2x.png in Resources */,
+				7B8E3DF41680DE1600CBC21C /* stop@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

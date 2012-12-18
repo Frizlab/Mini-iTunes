@@ -98,10 +98,10 @@
 		case FLPlayerStatePlaying: /* No Break */
 		case FLPlayerStateFastForwarding: /* No Break */
 		case FLPlayerStateRewinding: /* No Break */
-			return [NSImage imageNamed:@"pause.png"];
+			return [NSImage imageNamed:@"pause"];
 		case FLPlayerStateStopped:
 		case FLPlayerStatePaused:
-			return [NSImage imageNamed:@"play.png"];
+			return [NSImage imageNamed:@"play"];
 		default:
 			NSLog(@"*** Warning: Unknown player state %d", (int)self.playerState);
 			return nil;
