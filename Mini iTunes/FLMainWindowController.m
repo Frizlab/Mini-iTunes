@@ -16,6 +16,13 @@
 
 @implementation FLMainWindowController
 
+@synthesize sliderVolume;
+@synthesize buttonPrevious;
+@synthesize iTunesLaunched;
+@synthesize volume, playerState, hasPlayerPosition, imagePlayButton;
+@synthesize playPosition, trackLength;
+@synthesize curTrackName, curTrackAlbum, curTrackArtist, curTrackInfos;
+
 - (id)initWithWindow:(NSWindow *)window
 {
 	if ((self = [super initWithWindow:window]) != nil) {
@@ -25,11 +32,11 @@
 		self.iTunesLaunched = NO;
 		self.playerState = FLPlayerStateStopped;
 		
-		keyPathComputation = [@{
-			@"curTrackAlbum": @[@"curTrackInfos"],
-			@"curTrackAlbum": @[@"curTrackArtist"],
-			@"playerState":   @[@"imagePlayButton"]
-		} retain];
+		keyPathComputation = [[NSDictionary dictionaryWithObjectsAndKeys:
+									  [NSArray arrayWithObject:@"curTrackInfos"], @"curTrackAlbum",
+									  [NSArray arrayWithObject:@"curTrackArtist"], @"curTrackAlbum",
+									  [NSArray arrayWithObject:@"imagePlayButton"], @"playerState", nil
+									  ] retain];
 		for (NSString *key in keyPathComputation.allKeys)
 			[self addObserver:self forKeyPath:key options:NSKeyValueObservingOptionPrior context:NULL];
 	}

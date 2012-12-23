@@ -11,7 +11,7 @@
 #import "FLiTunesControllerProxy.h"
 
 
-typedef enum FLiTunesPlayerState: NSUInteger {
+typedef enum FLiTunesPlayerState {
 	FLPlayerStateStopped = 0,
 	FLPlayerStatePlaying = 1,
 	FLPlayerStatePaused = 2,
