@@ -48,6 +48,11 @@
 	[iTunesControllerInstance setPlayHeadPosition: value];
 }
 
+- (void)setiTunesVolume: (NSNumber*) value
+{
+	[iTunesControllerInstance setiTunesVolume: value];
+}
+
 
 
 @end

@@ -684,6 +684,14 @@
 					</object>
 					<int key="connectionID">122</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">volumeChanged:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="77426680"/>
+					</object>
+					<int key="connectionID">123</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -888,6 +896,9 @@
 				<string key="-3.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="10.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="11.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<object class="NSAffineTransform" key="11.IBViewBoundsToFrameTransform">
+					<bytes key="NSTransformStruct">P4AAAL+AAABBuAAAwbgAAA</bytes>
+				</object>
 				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="13.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="14.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -922,7 +933,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">122</int>
+			<int key="maxID">123</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -934,6 +945,7 @@
 						<string key="playHeadPositionChanged:">id</string>
 						<string key="playpauseAction:">id</string>
 						<string key="previousAction:">id</string>
+						<string key="volumeChanged:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="nextAction:">
@@ -950,6 +962,10 @@
 						</object>
 						<object class="IBActionInfo" key="previousAction:">
 							<string key="name">previousAction:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="volumeChanged:">
+							<string key="name">volumeChanged:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>
@@ -1460,8 +1476,8 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="back">{25, 15}</string>
-			<string key="loud_sound">{5.50038, 5}</string>
-			<string key="low_sound">{5.50038, 5}</string>
+			<string key="loud_sound">{11, 10}</string>
+			<string key="low_sound">{11, 10}</string>
 			<string key="next">{25, 15}</string>
 			<string key="play">{14, 15}</string>
 		</dictionary>

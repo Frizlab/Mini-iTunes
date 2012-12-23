@@ -38,11 +38,17 @@ script FLiTunesController
 		tell application id "com.apple.iTunes" to previous track
 	end playPrevious
 	
-	on setPlayHeadPosition_(newValue)
+	on setPlayHeadPosition_(value)
 		if FLUtils's isiTunesLaunched() is false then return
-		log newValue
-		tell application id "com.apple.iTunes" to set player position to newValue as real
+		
+		tell application id "com.apple.iTunes" to set player position to (value as real)
 	end setPlayHeadPosition_
+	
+	on setiTunesVolume_(value)
+		if FLUtils's isiTunesLaunched() is false then return
+		
+		tell application id "com.apple.iTunes" to set sound volume to (value as real)
+	end setiTunesVolume_
 	
 	
 	-- -- Class Methods -- --

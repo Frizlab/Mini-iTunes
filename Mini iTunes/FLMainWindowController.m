@@ -97,11 +97,14 @@
 	[iTunesController playNext];
 }
 
-
 - (IBAction)playHeadPositionChanged:(id)sender
 {
 	[iTunesController setPlayHeadPosition:[NSNumber numberWithFloat: [sender floatValue]]];
-	NSLog(@"Ok %g",[sender floatValue]);
+}
+
+- (IBAction)volumeChanged:(id)sender
+{
+	[iTunesController setiTunesVolume:[NSNumber numberWithFloat: [sender floatValue]*100]];
 }
 
 #pragma mark - Overridden Properties

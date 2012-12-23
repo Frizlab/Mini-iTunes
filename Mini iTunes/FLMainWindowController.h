@@ -53,5 +53,6 @@ typedef enum FLiTunesPlayerState {
 - (IBAction)previousAction:(id)sender;
 - (IBAction)nextAction:(id)sender;
 - (IBAction)playHeadPositionChanged:(id)sender;
+- (IBAction)volumeChanged:(id)sender;
 
 @end
