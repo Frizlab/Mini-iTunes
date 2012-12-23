@@ -7,12 +7,12 @@
 --
 
 script FLiTunesController
-	property parent: class "NSObject"
+	property parent : class "NSObject"
 	
 	-- -- -- Properties -- -- --
 	
 	-- Class "imports"
-	property FLUtils: class "FLUtils"
+	property FLUtils : class "FLUtils"
 	
 	-- Constants
 	
@@ -37,6 +37,13 @@ script FLiTunesController
 		
 		tell application id "com.apple.iTunes" to previous track
 	end playPrevious
+	
+	on setPlayHeadPosition_(newValue)
+		if FLUtils's isiTunesLaunched() is false then return
+		log newValue
+		tell application id "com.apple.iTunes" to set player position to newValue as real
+	end setPlayHeadPosition_
+	
 	
 	-- -- Class Methods -- --
 	

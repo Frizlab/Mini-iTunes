@@ -15,7 +15,7 @@
 
 
 @implementation FLMainWindowController
-
+ 
 @synthesize sliderVolume;
 @synthesize buttonPrevious;
 @synthesize iTunesLaunched;
@@ -95,6 +95,13 @@
 - (IBAction)nextAction:(id)sender
 {
 	[iTunesController playNext];
+}
+
+
+- (IBAction)playHeadPositionChanged:(id)sender
+{
+	[iTunesController setPlayHeadPosition:[NSNumber numberWithFloat: [sender floatValue]]];
+	NSLog(@"Ok %g",[sender floatValue]);
 }
 
 #pragma mark - Overridden Properties

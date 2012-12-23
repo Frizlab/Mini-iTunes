@@ -18,5 +18,6 @@
 
 - (void)playNext;
 - (void)playPrevious;
+- (void)setPlayHeadPosition:(NSNumber*)value;
 
 @end

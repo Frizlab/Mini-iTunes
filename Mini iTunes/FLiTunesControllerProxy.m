@@ -43,4 +43,11 @@
 	[iTunesControllerInstance playPrevious];
 }
 
+- (void)setPlayHeadPosition: (NSNumber*) value
+{
+	[iTunesControllerInstance setPlayHeadPosition: value];
+}
+
+
+
 @end
