@@ -53,6 +53,11 @@
 	[iTunesControllerInstance setiTunesVolume: value];
 }
 
+- (void)deiconizeiTunes
+{
+	[iTunesControllerInstance deiconizeiTunes];
+}
+
 
 
 @end

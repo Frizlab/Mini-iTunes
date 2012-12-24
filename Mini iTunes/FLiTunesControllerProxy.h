@@ -20,5 +20,6 @@
 - (void)playPrevious;
 - (void)setPlayHeadPosition:(NSNumber*)value;
 - (void)setiTunesVolume:(NSNumber*)value;
+- (void)deiconizeiTunes;
 
 @end

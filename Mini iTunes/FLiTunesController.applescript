@@ -50,6 +50,17 @@ script FLiTunesController
 		tell application id "com.apple.iTunes" to set sound volume to (value as real)
 	end setiTunesVolume_
 	
+	on deiconizeiTunes()
+		if FLUtils's isiTunesLaunched() is false then return
+		
+		tell application id "com.apple.iTunes"
+			set minimized of browser window 1 to false
+			set visible of browser window 1 to true
+			activate
+		end tell
+	end deiconizeiTunes
+	
+	
 	
 	-- -- Class Methods -- --
 	

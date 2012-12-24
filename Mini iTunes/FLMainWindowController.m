@@ -107,6 +107,14 @@
 	[iTunesController setiTunesVolume:[NSNumber numberWithFloat: [sender floatValue]*100]];
 }
 
+
+#pragma mark - NSWindow Delegate
+- (BOOL) windowShouldZoom:(NSWindow *)window toFrame:(NSRect)newFrame
+{
+	[iTunesController deiconizeiTunes];
+	return NO;
+}	
+
 #pragma mark - Overridden Properties
 
 - (NSImage *)imagePlayButton
