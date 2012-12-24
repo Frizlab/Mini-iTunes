@@ -5,3 +5,4 @@
 * et réciproquement
 * format des temps mm:ss si hh==0
 * les flèches g/d déplacent de 10s
+* une icône par pitié !

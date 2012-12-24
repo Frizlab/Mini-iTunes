@@ -23,6 +23,7 @@ script FLAppDelegate
 	-- Constants
 	property FL_UDK_LAUNCH_ITUNES: "FL Launch iTunes"
 	property FL_UDK_QUIT_WITH_ITUNES: "FL Quit With iTunes"
+	property FL_UDK_ITUNES_CHECK_INTERVAL: "FL Interval Between Update"
 	
 	-- Actual Properties
 	property standardUserDefaults: NSUserDefaults's standardUserDefaults
@@ -53,6 +54,7 @@ script FLAppDelegate
 		
 		defaultValues's setValue_forKey_(true, FL_UDK_LAUNCH_ITUNES)
 		defaultValues's setValue_forKey_(true, FL_UDK_QUIT_WITH_ITUNES)
+		defaultValues's setValue_forKey_(0.5, FL_UDK_ITUNES_CHECK_INTERVAL)
 		
 		standardUserDefaults's registerDefaults_(defaultValues)
 	end initialize
@@ -132,7 +134,7 @@ script FLAppDelegate
 		
 		-- Setting up iTunes Status Update timer
 		my iTunesStatusUpdate_(missing value)
-		NSTimer's scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_(.25, me, "iTunesStatusUpdate:", null, 1)
+		NSTimer's scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_(standardUserDefaults's floatForKey_(FL_UDK_ITUNES_CHECK_INTERVAL), me, "iTunesStatusUpdate:", null, 1)
 	end applicationWillFinishLaunching_
 
 	on applicationShouldTerminate_(sender)
