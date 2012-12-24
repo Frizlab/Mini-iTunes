@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50A3069D1687D8F5002101A0 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 50A3069C1687D8F4002101A0 /* Readme.md */; };
+		50A3069F1687D935002101A0 /* Todo.md in Resources */ = {isa = PBXBuildFile; fileRef = 50A3069E1687D935002101A0 /* Todo.md */; };
 		7B8E3DCD167F336E00CBC21C /* FLPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E3DCB167F336E00CBC21C /* FLPreferencesWindowController.m */; };
 		7B8E3DCE167F336E00CBC21C /* FLPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E3DCC167F336E00CBC21C /* FLPreferencesWindow.xib */; };
 		7B8E3DD6167FDF7500CBC21C /* FLSecondsToHMSTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E3DD5167FDF7500CBC21C /* FLSecondsToHMSTransformer.m */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50A3069C1687D8F4002101A0 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
+		50A3069E1687D935002101A0 /* Todo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Todo.md; sourceTree = "<group>"; };
 		7B8E3DCA167F336E00CBC21C /* FLPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLPreferencesWindowController.h; sourceTree = "<group>"; };
 		7B8E3DCB167F336E00CBC21C /* FLPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLPreferencesWindowController.m; sourceTree = "<group>"; };
 		7B8E3DCC167F336E00CBC21C /* FLPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FLPreferencesWindow.xib; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 		7BB2D6021674D3E0008A2D80 = {
 			isa = PBXGroup;
 			children = (
+				50A3069C1687D8F4002101A0 /* Readme.md */,
+				50A3069E1687D935002101A0 /* Todo.md */,
 				7BB2D6191674D3E0008A2D80 /* Mini iTunes */,
 				7BB2D6101674D3E0008A2D80 /* Frameworks */,
 				7BB2D60E1674D3E0008A2D80 /* Products */,
@@ -257,6 +263,8 @@
 				7B8E3DF21680DE1600CBC21C /* pause@2x.png in Resources */,
 				7B8E3DF31680DE1600CBC21C /* play@2x.png in Resources */,
 				7B8E3DF41680DE1600CBC21C /* stop@2x.png in Resources */,
+				50A3069D1687D8F5002101A0 /* Readme.md in Resources */,
+				50A3069F1687D935002101A0 /* Todo.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
