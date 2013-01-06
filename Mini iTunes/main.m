@@ -12,6 +12,8 @@
 
 int main(int argc, char *argv[])
 {
+	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	[[NSBundle mainBundle] loadAppleScriptObjectiveCScripts];
+	[pool drain];
 	return NSApplicationMain(argc, (const char **)argv);
 }
