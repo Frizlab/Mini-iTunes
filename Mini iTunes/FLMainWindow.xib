@@ -206,7 +206,7 @@
 						<object class="NSSlider" id="801059943">
 							<reference key="NSNextResponder" ref="971545382"/>
 							<int key="NSvFlags">266</int>
-							<string key="NSFrame">{{161, 4}, {78, 21}}</string>
+							<string key="NSFrame">{{155, 4}, {84, 21}}</string>
 							<reference key="NSSuperview" ref="971545382"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSSliderCell" key="NSCell" id="541243601">
@@ -285,14 +285,14 @@
 						<object class="NSTextField" id="561706068">
 							<reference key="NSNextResponder" ref="971545382"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{108, 9}, {50, 11}}</string>
+							<string key="NSFrame">{{108, 9}, {44, 11}}</string>
 							<reference key="NSSuperview" ref="971545382"/>
 							<reference key="NSNextKeyView" ref="801059943"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="179440896">
 								<int key="NSCellFlags">68157504</int>
 								<int key="NSCellFlags2">71566336</int>
-								<string key="NSContents">-42:42:42</string>
+								<string key="NSContents">42:42:42</string>
 								<object class="NSFont" key="NSSupport">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">9</double>
@@ -311,7 +311,7 @@
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="442102817">
 								<int key="NSCellFlags">67239424</int>
-								<int key="NSCellFlags2">134217728</int>
+								<int key="NSCellFlags2">0</int>
 								<string key="NSContents">-42:42:42</string>
 								<object class="NSFont" key="NSSupport">
 									<string key="NSName">LucidaGrande</string>

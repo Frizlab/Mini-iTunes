@@ -29,6 +29,8 @@
 	unsigned m = (unsigned)(seconds / 60.);
 	seconds -= m * 60;
 	unsigned s = (unsigned)seconds;
+	if (h==0)
+		return [NSString stringWithFormat:@"%@%02u:%02u", minus? @"-": @"", m, s];
 	return [NSString stringWithFormat:@"%@%02u:%02u:%02u", minus? @"-": @"", h, m, s];
 }
 
