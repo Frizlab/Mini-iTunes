@@ -60,6 +60,18 @@ script FLiTunesController
 		end tell
 	end deiconizeiTunes
 	
+	on setRelativePlayHeadPosition_(value)
+		if FLUtils's isiTunesLaunched() is false then return
+		
+		tell application id "com.apple.iTunes"
+			set myPos to player position + (value as real)
+			set myLen to duration of current track
+			if myPos < 0 then set mypPos to 0
+			if myPos > myLen then set myPos to myLen
+			set player position to (myPos as real)
+		end tell
+	end setRelativePlayHeadPosition_
+	
 	
 	
 	-- -- Class Methods -- --

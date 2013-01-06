@@ -11,6 +11,7 @@
 		504513D01699BC260015FC77 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 504513CE1699BC260015FC77 /* icon.png */; };
 		50A3069D1687D8F5002101A0 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 50A3069C1687D8F4002101A0 /* Readme.md */; };
 		50A3069F1687D935002101A0 /* Todo.md in Resources */ = {isa = PBXBuildFile; fileRef = 50A3069E1687D935002101A0 /* Todo.md */; };
+		50FDE5271699DB8E0012EC0C /* FLApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FDE5261699DB8E0012EC0C /* FLApplication.m */; };
 		7B8E3DCD167F336E00CBC21C /* FLPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E3DCB167F336E00CBC21C /* FLPreferencesWindowController.m */; };
 		7B8E3DCE167F336E00CBC21C /* FLPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E3DCC167F336E00CBC21C /* FLPreferencesWindow.xib */; };
 		7B8E3DD6167FDF7500CBC21C /* FLSecondsToHMSTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E3DD5167FDF7500CBC21C /* FLSecondsToHMSTransformer.m */; };
@@ -48,6 +49,8 @@
 		50A3069C1687D8F4002101A0 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
 		50A3069E1687D935002101A0 /* Todo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Todo.md; sourceTree = "<group>"; };
 		50FDE4FE1699D43B0012EC0C /* FLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLConstants.h; sourceTree = "<group>"; };
+		50FDE5251699DB8E0012EC0C /* FLApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApplication.h; sourceTree = "<group>"; };
+		50FDE5261699DB8E0012EC0C /* FLApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLApplication.m; sourceTree = "<group>"; };
 		7B8E3DCA167F336E00CBC21C /* FLPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLPreferencesWindowController.h; sourceTree = "<group>"; };
 		7B8E3DCB167F336E00CBC21C /* FLPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLPreferencesWindowController.m; sourceTree = "<group>"; };
 		7B8E3DCC167F336E00CBC21C /* FLPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FLPreferencesWindow.xib; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				7B8E3DE11680A45C00CBC21C /* FLiTunesControllerProxy.m */,
 				7B8E3DD81680537800CBC21C /* FLiTunesController.applescript */,
 				7BB2D61A1674D3E0008A2D80 /* Supporting Files */,
+				50FDE5251699DB8E0012EC0C /* FLApplication.h */,
+				50FDE5261699DB8E0012EC0C /* FLApplication.m */,
 			);
 			path = "Mini iTunes";
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 				7B8E3DD91680537800CBC21C /* FLiTunesController.applescript in Sources */,
 				7B8E3DDB168054DE00CBC21C /* FLUtils.applescript in Sources */,
 				7B8E3DE21680A45C00CBC21C /* FLiTunesControllerProxy.m in Sources */,
+				50FDE5271699DB8E0012EC0C /* FLApplication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

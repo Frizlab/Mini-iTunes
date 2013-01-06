@@ -58,6 +58,11 @@
 	[iTunesControllerInstance deiconizeiTunes];
 }
 
+- (void)setRelativePlayHeadPosition: (NSNumber*) value
+{
+	[iTunesControllerInstance setRelativePlayHeadPosition: value];
+}
+
 
 
 @end

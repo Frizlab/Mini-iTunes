@@ -18,8 +18,9 @@
 
 - (void)playNext;
 - (void)playPrevious;
-- (void)setPlayHeadPosition:(NSNumber*)value;
-- (void)setiTunesVolume:(NSNumber*)value;
+- (void)setPlayHeadPosition:(NSNumber *)value;
+- (void)setiTunesVolume:(NSNumber *)value;
 - (void)deiconizeiTunes;
+- (void)setRelativePlayHeadPosition:(NSNumber *)value;
 
 @end
