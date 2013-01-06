@@ -26,10 +26,17 @@
 					return;
             }
             if ( keyChar == NSRightArrowFunctionKey ) {
-					FLiTunesControllerProxy *proxy = [FLiTunesControllerProxy new];
-					[proxy setRelativePlayHeadPosition: [NSNumber numberWithInt:+10]];
-					[proxy release];
-					return;
+					if ([theEvent modifierFlags] & NSCommandKeyMask) {
+						FLiTunesControllerProxy *proxy = [FLiTunesControllerProxy new];
+						[proxy setPlayHeadPositionToEnd];
+						[proxy release];
+						return;
+					} else {
+						FLiTunesControllerProxy *proxy = [FLiTunesControllerProxy new];
+						[proxy setRelativePlayHeadPosition: [NSNumber numberWithInt:+10]];
+						[proxy release];
+						return;
+					}
             }
             if ( keyChar == NSUpArrowFunctionKey ) {
 					// maybe something here one day

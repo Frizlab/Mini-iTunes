@@ -63,6 +63,10 @@
 	[iTunesControllerInstance setRelativePlayHeadPosition: value];
 }
 
+- (void)setPlayHeadPositionToEnd
+{
+	[iTunesControllerInstance setPlayHeadPositionToEnd];
+}
 
 
 @end

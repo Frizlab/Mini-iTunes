@@ -72,6 +72,14 @@ script FLiTunesController
 		end tell
 	end setRelativePlayHeadPosition_
 	
+	on setPlayHeadPositionToEnd()
+		if FLUtils's isiTunesLaunched() is false then return
+		
+		tell application id "com.apple.iTunes"
+			set player position to (duration of current track as real)
+		end tell
+	end setPlayHeadPositionToEnd
+	
 	
 	
 	-- -- Class Methods -- --

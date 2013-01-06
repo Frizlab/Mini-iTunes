@@ -105,6 +105,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50FDE5661699E46C0012EC0C /* Prefs */ = {
+			isa = PBXGroup;
+			children = (
+				7B8E3DCC167F336E00CBC21C /* FLPreferencesWindow.xib */,
+				7B8E3DCA167F336E00CBC21C /* FLPreferencesWindowController.h */,
+				7B8E3DCB167F336E00CBC21C /* FLPreferencesWindowController.m */,
+			);
+			name = Prefs;
+			sourceTree = "<group>";
+		};
 		7BB2D6021674D3E0008A2D80 = {
 			isa = PBXGroup;
 			children = (
@@ -147,23 +157,21 @@
 		7BB2D6191674D3E0008A2D80 /* Mini iTunes */ = {
 			isa = PBXGroup;
 			children = (
+				50FDE5251699DB8E0012EC0C /* FLApplication.h */,
+				50FDE5261699DB8E0012EC0C /* FLApplication.m */,
 				7B8E3DDA168054DE00CBC21C /* FLUtils.applescript */,
 				7BB2D6271674D3E0008A2D80 /* MainMenu.xib */,
 				7BB2D6251674D3E0008A2D80 /* FLAppDelegate.applescript */,
 				7BB2D6431674E687008A2D80 /* FLMainWindow.xib */,
 				7BB2D6401674E4DB008A2D80 /* FLMainWindowController.h */,
 				7BB2D6411674E4DB008A2D80 /* FLMainWindowController.m */,
-				7B8E3DCC167F336E00CBC21C /* FLPreferencesWindow.xib */,
-				7B8E3DCA167F336E00CBC21C /* FLPreferencesWindowController.h */,
-				7B8E3DCB167F336E00CBC21C /* FLPreferencesWindowController.m */,
+				50FDE5661699E46C0012EC0C /* Prefs */,
 				7B8E3DD4167FDF7500CBC21C /* FLSecondsToHMSTransformer.h */,
 				7B8E3DD5167FDF7500CBC21C /* FLSecondsToHMSTransformer.m */,
 				7B8E3DE01680A45C00CBC21C /* FLiTunesControllerProxy.h */,
 				7B8E3DE11680A45C00CBC21C /* FLiTunesControllerProxy.m */,
 				7B8E3DD81680537800CBC21C /* FLiTunesController.applescript */,
 				7BB2D61A1674D3E0008A2D80 /* Supporting Files */,
-				50FDE5251699DB8E0012EC0C /* FLApplication.h */,
-				50FDE5261699DB8E0012EC0C /* FLApplication.m */,
 			);
 			path = "Mini iTunes";
 			sourceTree = "<group>";
