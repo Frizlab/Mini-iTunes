@@ -7,29 +7,30 @@
 --
 
 script FLAppDelegate
-	property parent: class "NSObject"
+	property parent : class "NSObject"
 	
 	-- -- -- Properties -- -- --
 	
 	-- Class "imports"
-	property NSTimer: class "NSTimer"
-	property NSApplication: class "NSApplication"
-	property NSUserDefaults: class "NSUserDefaults"
-	property NSMutableDictionary: class "NSMutableDictionary"
-	property FLMainWindowController: class "FLMainWindowController"
-	property FLPreferencesWindowController: class "FLPreferencesWindowController"
-	property FLUtils: class "FLUtils"
+	property NSTimer : class "NSTimer"
+	property NSApplication : class "NSApplication"
+	property NSUserDefaults : class "NSUserDefaults"
+	property NSMutableDictionary : class "NSMutableDictionary"
+	property FLMainWindowController : class "FLMainWindowController"
+	property FLPreferencesWindowController : class "FLPreferencesWindowController"
+	property FLUtils : class "FLUtils"
 	
 	-- Constants
-	property FL_UDK_LAUNCH_ITUNES: "FL Launch iTunes"
-	property FL_UDK_QUIT_WITH_ITUNES: "FL Quit With iTunes"
-	property FL_UDK_ITUNES_CHECK_INTERVAL: "FL Interval Between Update"
-	property FL_UDK_SHOW_REMAINING_TIME: "FL Show Remaining Time Instead of Total Track Time"
+	property FL_UDK_LAUNCH_ITUNES : "FL Launch iTunes"
+	property FL_UDK_QUIT_WITH_ITUNES : "FL Quit With iTunes"
+	property FL_UDK_ITUNES_CHECK_INTERVAL : "FL Interval Between Update"
+	property FL_UDK_SHOW_REMAINING_TIME : "FL Show Remaining Time Instead of Total Track Time"
 	
 	-- Actual Properties
+	-- warning: this line disables colorization!
 	property standardUserDefaults: NSUserDefaults's standardUserDefaults
-	property mainWindowController: missing value
-	property preferencesWindowController: missing value
+	property mainWindowController : missing value
+	property preferencesWindowController : missing value
 	
 	-- -- -- Methods -- -- --
 	
@@ -95,15 +96,15 @@ script FLAppDelegate
 			set mainWindowController's volume to sound volume / 100
 			
 			-- Setting Player State
-			if (player state is stopped)
+			if (player state is stopped) then
 				set mainWindowController's playerState to 0
-			else if (player state is playing)
+			else if (player state is playing) then
 				set mainWindowController's playerState to 1
-			else if (player state is paused)
+			else if (player state is paused) then
 				set mainWindowController's playerState to 2
-			else if (player state is fast forwarding)
+			else if (player state is fast forwarding) then
 				set mainWindowController's playerState to 3
-			else if (player state is rewinding)
+			else if (player state is rewinding) then
 				set mainWindowController's playerState to 4
 			else
 				log "*** Warning: Got unknown player state"
@@ -126,7 +127,7 @@ script FLAppDelegate
 			end if
 		end tell
 	end iTunesStatusUpdate_
-
+	
 	-- -- Application Delegate Implementation -- --
 	
 	on applicationWillFinishLaunching_(aNotification)
@@ -138,7 +139,7 @@ script FLAppDelegate
 		my iTunesStatusUpdate_(missing value)
 		NSTimer's scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_(standardUserDefaults's floatForKey_(FL_UDK_ITUNES_CHECK_INTERVAL), me, "iTunesStatusUpdate:", null, 1)
 	end applicationWillFinishLaunching_
-
+	
 	on applicationShouldTerminate_(sender)
 		-- Insert code here to do any housekeeping before your application quits 
 		return current application's NSTerminateNow

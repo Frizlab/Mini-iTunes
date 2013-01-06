@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		504513CF1699BC260015FC77 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 504513CD1699BC260015FC77 /* icon.icns */; };
 		504513D01699BC260015FC77 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 504513CE1699BC260015FC77 /* icon.png */; };
+		50817A101699F241008C6533 /* FLAppDelegate.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 50817A0F1699F241008C6533 /* FLAppDelegate.applescript */; };
 		50A3069D1687D8F5002101A0 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 50A3069C1687D8F4002101A0 /* Readme.md */; };
 		50A3069F1687D935002101A0 /* Todo.md in Resources */ = {isa = PBXBuildFile; fileRef = 50A3069E1687D935002101A0 /* Todo.md */; };
 		50FDE5271699DB8E0012EC0C /* FLApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FDE5261699DB8E0012EC0C /* FLApplication.m */; };
@@ -30,7 +31,6 @@
 		7BB2D61E1674D3E0008A2D80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D61C1674D3E0008A2D80 /* InfoPlist.strings */; };
 		7BB2D6201674D3E0008A2D80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB2D61F1674D3E0008A2D80 /* main.m */; };
 		7BB2D6241674D3E0008A2D80 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D6221674D3E0008A2D80 /* Credits.rtf */; };
-		7BB2D6261674D3E0008A2D80 /* FLAppDelegate.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 7BB2D6251674D3E0008A2D80 /* FLAppDelegate.applescript */; };
 		7BB2D6291674D3E0008A2D80 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D6271674D3E0008A2D80 /* MainMenu.xib */; };
 		7BB2D6311674D7A6008A2D80 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D6301674D7A6008A2D80 /* back.png */; };
 		7BB2D6381674D920008A2D80 /* loud_sound.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2D6321674D920008A2D80 /* loud_sound.png */; };
@@ -46,6 +46,7 @@
 /* Begin PBXFileReference section */
 		504513CD1699BC260015FC77 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		504513CE1699BC260015FC77 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		50817A0F1699F241008C6533 /* FLAppDelegate.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = FLAppDelegate.applescript; sourceTree = "<group>"; };
 		50A3069C1687D8F4002101A0 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
 		50A3069E1687D935002101A0 /* Todo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Todo.md; sourceTree = "<group>"; };
 		50FDE4FE1699D43B0012EC0C /* FLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLConstants.h; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		7BB2D61F1674D3E0008A2D80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7BB2D6211674D3E0008A2D80 /* Mini iTunes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mini iTunes-Prefix.pch"; sourceTree = "<group>"; };
 		7BB2D6231674D3E0008A2D80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		7BB2D6251674D3E0008A2D80 /* FLAppDelegate.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = FLAppDelegate.applescript; sourceTree = "<group>"; };
 		7BB2D6281674D3E0008A2D80 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7BB2D6301674D7A6008A2D80 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		7BB2D6321674D920008A2D80 /* loud_sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loud_sound.png; sourceTree = "<group>"; };
@@ -160,8 +160,8 @@
 				50FDE5251699DB8E0012EC0C /* FLApplication.h */,
 				50FDE5261699DB8E0012EC0C /* FLApplication.m */,
 				7B8E3DDA168054DE00CBC21C /* FLUtils.applescript */,
+				50817A0F1699F241008C6533 /* FLAppDelegate.applescript */,
 				7BB2D6271674D3E0008A2D80 /* MainMenu.xib */,
-				7BB2D6251674D3E0008A2D80 /* FLAppDelegate.applescript */,
 				7BB2D6431674E687008A2D80 /* FLMainWindow.xib */,
 				7BB2D6401674E4DB008A2D80 /* FLMainWindowController.h */,
 				7BB2D6411674E4DB008A2D80 /* FLMainWindowController.m */,
@@ -299,7 +299,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BB2D6201674D3E0008A2D80 /* main.m in Sources */,
-				7BB2D6261674D3E0008A2D80 /* FLAppDelegate.applescript in Sources */,
 				7BB2D6421674E4DB008A2D80 /* FLMainWindowController.m in Sources */,
 				7B8E3DCD167F336E00CBC21C /* FLPreferencesWindowController.m in Sources */,
 				7B8E3DD6167FDF7500CBC21C /* FLSecondsToHMSTransformer.m in Sources */,
@@ -307,6 +306,7 @@
 				7B8E3DDB168054DE00CBC21C /* FLUtils.applescript in Sources */,
 				7B8E3DE21680A45C00CBC21C /* FLiTunesControllerProxy.m in Sources */,
 				50FDE5271699DB8E0012EC0C /* FLApplication.m in Sources */,
+				50817A101699F241008C6533 /* FLAppDelegate.applescript in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
