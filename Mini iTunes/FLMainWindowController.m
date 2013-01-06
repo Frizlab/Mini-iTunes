@@ -37,8 +37,8 @@
 		
 		keyPathComputation = [[NSDictionary dictionaryWithObjectsAndKeys:
 									  [NSArray arrayWithObject:@"curTrackInfos"], @"curTrackAlbum",
-									  [NSArray arrayWithObject:@"curTrackArtist"], @"curTrackAlbum",
-									  [NSArray arrayWithObject:@"imagePlayButton"], @"playerState", nil
+									  [NSArray arrayWithObject:@"curTrackInfos"], @"curTrackArtist",
+									  [NSArray arrayWithObject:@"imagePlayButton"], @"playerState",
 									  [NSArray arrayWithObject:@"trackTimeDisplay"], @"playPosition",
 									  [NSArray arrayWithObject:@"trackTimeDisplay"], @"trackLength",
 									  nil] retain];
