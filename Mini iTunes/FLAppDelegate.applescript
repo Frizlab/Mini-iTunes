@@ -24,6 +24,7 @@ script FLAppDelegate
 	property FL_UDK_LAUNCH_ITUNES: "FL Launch iTunes"
 	property FL_UDK_QUIT_WITH_ITUNES: "FL Quit With iTunes"
 	property FL_UDK_ITUNES_CHECK_INTERVAL: "FL Interval Between Update"
+	property FL_UDK_SHOW_REMAINING_TIME: "FL Show Remaining Time Instead of Total Track Time"
 	
 	-- Actual Properties
 	property standardUserDefaults: NSUserDefaults's standardUserDefaults
@@ -55,6 +56,7 @@ script FLAppDelegate
 		defaultValues's setValue_forKey_(true, FL_UDK_LAUNCH_ITUNES)
 		defaultValues's setValue_forKey_(true, FL_UDK_QUIT_WITH_ITUNES)
 		defaultValues's setValue_forKey_(0.5, FL_UDK_ITUNES_CHECK_INTERVAL)
+		defaultValues's setValue_forKey_(true, FL_UDK_SHOW_REMAINING_TIME)
 		
 		standardUserDefaults's registerDefaults_(defaultValues)
 	end initialize

@@ -31,6 +31,8 @@ typedef enum FLiTunesPlayerState {
 
 @property(retain) IBOutlet NSButton *buttonPrevious;
 
+@property(retain) IBOutlet NSButton *buttonTimeDisplay;
+
 @property(assign, setter = setiTunesLaunched:) BOOL iTunesLaunched;
 
 /* Between 0. and 1. */
@@ -43,16 +45,20 @@ typedef enum FLiTunesPlayerState {
 @property(assign) CGFloat playPosition;
 /* In seconds */
 @property(assign) CGFloat trackLength;
+@property(readonly) CGFloat trackTimeDisplay;
 
 @property(retain) NSString *curTrackName;
 @property(retain) NSString *curTrackAlbum;
 @property(retain) NSString *curTrackArtist;
 @property(retain, readonly) NSString *curTrackInfos;
 
+
 - (IBAction)playpauseAction:(id)sender;
 - (IBAction)previousAction:(id)sender;
 - (IBAction)nextAction:(id)sender;
+
 - (IBAction)playHeadPositionChanged:(id)sender;
 - (IBAction)volumeChanged:(id)sender;
+- (IBAction)toggleTime:(id)sender;
 
 @end

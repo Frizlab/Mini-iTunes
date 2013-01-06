@@ -7,6 +7,8 @@
  */
 
 #import "FLMainWindowController.h"
+#import "FLSecondsToHMSTransformer.h"
+#import "FLConstants.h"
 
 
 @interface FLMainWindowController ()
@@ -18,6 +20,7 @@
  
 @synthesize sliderVolume;
 @synthesize buttonPrevious;
+@synthesize buttonTimeDisplay;
 @synthesize iTunesLaunched;
 @synthesize volume, playerState, hasPlayerPosition, imagePlayButton;
 @synthesize playPosition, trackLength;
@@ -36,7 +39,9 @@
 									  [NSArray arrayWithObject:@"curTrackInfos"], @"curTrackAlbum",
 									  [NSArray arrayWithObject:@"curTrackArtist"], @"curTrackAlbum",
 									  [NSArray arrayWithObject:@"imagePlayButton"], @"playerState", nil
-									  ] retain];
+									  [NSArray arrayWithObject:@"trackTimeDisplay"], @"playPosition",
+									  [NSArray arrayWithObject:@"trackTimeDisplay"], @"trackLength",
+									  nil] retain];
 		for (NSString *key in keyPathComputation.allKeys)
 			[self addObserver:self forKeyPath:key options:NSKeyValueObservingOptionPrior context:NULL];
 	}
@@ -69,6 +74,10 @@
 	[super windowDidLoad];
 	
 	/* Let's init the UI */
+	[buttonTimeDisplay bind:@"title"
+						toObject:self
+					withKeyPath:@"trackTimeDisplay"
+						 options:[NSDictionary dictionaryWithObject:[[FLSecondsToHMSTransformer new] autorelease] forKey:NSValueTransformerBindingOption]];
 }
 
 - (void)dumpInfos
@@ -96,6 +105,15 @@
 {
 	[iTunesController playNext];
 }
+
+- (IBAction)toggleTime:(id)sender
+{
+	NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+	[self willChangeValueForKey:@"trackTimeDisplay"];
+	[ud setBool:![ud boolForKey:FL_UDK_SHOW_REMAINING_TIME] forKey:FL_UDK_SHOW_REMAINING_TIME];
+	[self didChangeValueForKey:@"trackTimeDisplay"];
+}
+
 
 - (IBAction)playHeadPositionChanged:(id)sender
 {
@@ -136,6 +154,13 @@
 - (BOOL)hasPlayerPosition
 {
 	return (self.playerState != FLPlayerStateStopped);
+}
+
+- (CGFloat)trackTimeDisplay
+{
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:FL_UDK_SHOW_REMAINING_TIME])
+		return playPosition-trackLength;
+	return trackLength;
 }
 
 - (NSString *)curTrackInfos
