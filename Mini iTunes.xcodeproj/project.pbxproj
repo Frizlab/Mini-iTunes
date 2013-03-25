@@ -11,7 +11,6 @@
 		504513D01699BC260015FC77 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 504513CE1699BC260015FC77 /* icon.png */; };
 		50817A101699F241008C6533 /* FLAppDelegate.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 50817A0F1699F241008C6533 /* FLAppDelegate.applescript */; };
 		50A3069D1687D8F5002101A0 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 50A3069C1687D8F4002101A0 /* Readme.md */; };
-		50A3069F1687D935002101A0 /* Todo.md in Resources */ = {isa = PBXBuildFile; fileRef = 50A3069E1687D935002101A0 /* Todo.md */; };
 		50FDE5271699DB8E0012EC0C /* FLApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FDE5261699DB8E0012EC0C /* FLApplication.m */; };
 		7B8E3DCD167F336E00CBC21C /* FLPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E3DCB167F336E00CBC21C /* FLPreferencesWindowController.m */; };
 		7B8E3DCE167F336E00CBC21C /* FLPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E3DCC167F336E00CBC21C /* FLPreferencesWindow.xib */; };
@@ -48,7 +47,6 @@
 		504513CE1699BC260015FC77 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		50817A0F1699F241008C6533 /* FLAppDelegate.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = FLAppDelegate.applescript; sourceTree = "<group>"; };
 		50A3069C1687D8F4002101A0 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
-		50A3069E1687D935002101A0 /* Todo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Todo.md; sourceTree = "<group>"; };
 		50FDE4FE1699D43B0012EC0C /* FLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLConstants.h; sourceTree = "<group>"; };
 		50FDE5251699DB8E0012EC0C /* FLApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApplication.h; sourceTree = "<group>"; };
 		50FDE5261699DB8E0012EC0C /* FLApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLApplication.m; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				50A3069C1687D8F4002101A0 /* Readme.md */,
-				50A3069E1687D935002101A0 /* Todo.md */,
 				7BB2D6191674D3E0008A2D80 /* Mini iTunes */,
 				7BB2D6101674D3E0008A2D80 /* Frameworks */,
 				7BB2D60E1674D3E0008A2D80 /* Products */,
@@ -285,7 +282,6 @@
 				7B8E3DF31680DE1600CBC21C /* play@2x.png in Resources */,
 				7B8E3DF41680DE1600CBC21C /* stop@2x.png in Resources */,
 				50A3069D1687D8F5002101A0 /* Readme.md in Resources */,
-				50A3069F1687D935002101A0 /* Todo.md in Resources */,
 				504513CF1699BC260015FC77 /* icon.icns in Resources */,
 				504513D01699BC260015FC77 /* icon.png in Resources */,
 			);
