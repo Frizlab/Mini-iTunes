@@ -14,8 +14,10 @@
 - (void)sendEvent:(NSEvent *)theEvent
 {
 	if (theEvent.type == NSKeyDown) {
+		NSResponder *firstResponder = self.mainWindow.firstResponder;
 		NSString *eventCharacters = [theEvent charactersIgnoringModifiers];
-		if ([theEvent modifierFlags] & NSNumericPadKeyMask /* Arrow keys */ || [eventCharacters isEqualToString:@" "]) {
+		if (firstResponder == self.mainWindow /* If the first responder is not the main window we probably won't want to intercept the keys */ &&
+			 ([theEvent modifierFlags] & NSNumericPadKeyMask /* Arrow keys */ || [eventCharacters isEqualToString:@" "])) {
 			unichar keyChar = 0;
 			if ( [eventCharacters length] == 1 ) {
             keyChar = [eventCharacters characterAtIndex:0];
@@ -39,11 +41,6 @@
 					case NSUpArrowFunctionKey:   /* Nothing done currently */ break;
 					case NSDownArrowFunctionKey: /* Nothing done currently */ break;
 					case ' ': {
-						if (self.mainWindow.firstResponder != self.mainWindow)
-							/* There is a first responder that can potentially respond
-							 * to the space key down event. We won't intercept the event */
-							break;
-						
 						FLiTunesControllerProxy *proxy = [FLiTunesControllerProxy new];
 						[proxy playpause];
 						[proxy release];
