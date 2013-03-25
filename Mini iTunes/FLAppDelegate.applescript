@@ -67,7 +67,8 @@ script FLAppDelegate
 	on iTunesStatusUpdate_(timer)
 		-- mainWindowController's dumpInfos()
 		
-		if FLUtils's isiTunesLaunched() is false then
+		set mainWindowController's iTunesLaunched to FLUtils's isiTunesLaunched()
+		if (mainWindowController's iTunesLaunched as integer) = 0 then
 			if timer is missing value and standardUserDefaults's boolForKey_(FL_UDK_LAUNCH_ITUNES) then
 				-- We're at first launch of the app and we should launch iTunes
 				tell application id "com.apple.iTunes"
@@ -85,10 +86,8 @@ script FLAppDelegate
 			-- for the bindings to work. Even though the setter is re-defined
 			-- in the Main Window Controller to setiTunesLaunched:, the binding
 			-- will only work if one calls setITunesLaunched:
-			set mainWindowController's iTunesLaunched to 0
 			return
 		end if
-		set mainWindowController's iTunesLaunched to 1
 		
 		-- We can communicate with iTunes here
 		tell application id "com.apple.iTunes"
