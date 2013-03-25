@@ -8,11 +8,17 @@
 
 #import "FLPreferencesWindowController.h"
 
+
+
 @interface FLPreferencesWindowController ()
 
 @end
 
+
+
 @implementation FLPreferencesWindowController
+
+@synthesize numberFormatter;
 
 - (id)initWithWindow:(NSWindow *)window
 {
@@ -22,9 +28,18 @@
 	return self;
 }
 
+- (void)dealloc
+{
+	self.numberFormatter = nil;
+	
+	[super dealloc];
+}
+
 - (void)windowDidLoad
 {
 	[super windowDidLoad];
+	
+	numberFormatter.minimum = @.03;
 }
 
 @end

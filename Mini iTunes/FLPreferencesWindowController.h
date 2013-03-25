@@ -10,4 +10,6 @@
 
 @interface FLPreferencesWindowController : NSWindowController
 
+@property(retain) IBOutlet NSNumberFormatter *numberFormatter;
+
 @end
