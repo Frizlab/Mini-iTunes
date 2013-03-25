@@ -14,38 +14,37 @@
 - (void)sendEvent:(NSEvent *)theEvent
 {
 	if (theEvent.type == NSKeyDown) {
-		if ([theEvent modifierFlags] & NSNumericPadKeyMask) { // arrow keys have this mask
-			NSString *theArrow = [theEvent charactersIgnoringModifiers];
+		NSString *eventCharacters = [theEvent charactersIgnoringModifiers];
+		if ([theEvent modifierFlags] & NSNumericPadKeyMask /* Arrow keys */ || [eventCharacters isEqualToString:@" "]) {
 			unichar keyChar = 0;
-			if ( [theArrow length] == 1 ) {
-            keyChar = [theArrow characterAtIndex:0];
-            if ( keyChar == NSLeftArrowFunctionKey ) {
-					FLiTunesControllerProxy *proxy = [FLiTunesControllerProxy new];
-					[proxy setRelativePlayHeadPosition: [NSNumber numberWithInt:-10]];
-					[proxy release];
-					return;
-            }
-            if ( keyChar == NSRightArrowFunctionKey ) {
-					if ([theEvent modifierFlags] & NSCommandKeyMask) {
+			if ( [eventCharacters length] == 1 ) {
+            keyChar = [eventCharacters characterAtIndex:0];
+				switch (keyChar) {
+					case NSLeftArrowFunctionKey: {
 						FLiTunesControllerProxy *proxy = [FLiTunesControllerProxy new];
-						[proxy setPlayHeadPositionToEnd];
-						[proxy release];
-						return;
-					} else {
-						FLiTunesControllerProxy *proxy = [FLiTunesControllerProxy new];
-						[proxy setRelativePlayHeadPosition: [NSNumber numberWithInt:+10]];
+						[proxy setRelativePlayHeadPosition: [NSNumber numberWithInt:-10]];
 						[proxy release];
 						return;
 					}
-            }
-            if ( keyChar == NSUpArrowFunctionKey ) {
-					// maybe something here one day
-					// return;
-            }
-            if ( keyChar == NSDownArrowFunctionKey ) {
-					// maybe something here one day
-					// return;
-            }
+					case NSRightArrowFunctionKey: {
+						FLiTunesControllerProxy *proxy = [FLiTunesControllerProxy new];
+						if ([theEvent modifierFlags] & NSCommandKeyMask) {
+							[proxy setPlayHeadPositionToEnd];
+						} else {
+							[proxy setRelativePlayHeadPosition: [NSNumber numberWithInt:+10]];
+						}
+						[proxy release];
+						return;
+					}
+					case NSUpArrowFunctionKey:   /* Nothing done currently */ break;
+					case NSDownArrowFunctionKey: /* Nothing done currently */ break;
+					case ' ': {
+						FLiTunesControllerProxy *proxy = [FLiTunesControllerProxy new];
+						[proxy playpause];
+						[proxy release];
+						return;
+					}
+				}
 			}
 		}
 	}
