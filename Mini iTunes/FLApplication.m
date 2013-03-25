@@ -39,6 +39,11 @@
 					case NSUpArrowFunctionKey:   /* Nothing done currently */ break;
 					case NSDownArrowFunctionKey: /* Nothing done currently */ break;
 					case ' ': {
+						if (self.mainWindow.firstResponder != self.mainWindow)
+							/* There is a first responder that can potentially respond
+							 * to the space key down event. We won't intercept the event */
+							break;
+						
 						FLiTunesControllerProxy *proxy = [FLiTunesControllerProxy new];
 						[proxy playpause];
 						[proxy release];
