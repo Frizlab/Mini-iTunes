@@ -26,6 +26,21 @@
 @synthesize playPosition, trackLength;
 @synthesize curTrackName, curTrackAlbum, curTrackArtist, curTrackInfos;
 
++ (NSSet *)keyPathsForValuesAffectingCurTrackInfos
+{
+	return [NSSet setWithObjects:@"curTrackAlbum", @"curTrackArtist", nil];
+}
+
++ (NSSet *)keyPathsForValuesAffectingImagePlayButton
+{
+	return [NSSet setWithObjects:@"playerState", nil];
+}
+
++ (NSSet *)keyPathsForValuesAffectingTrackTimeDisplay
+{
+	return [NSSet setWithObjects:@"playPosition", @"trackLength", nil];
+}
+
 - (id)initWithWindow:(NSWindow *)window
 {
 	if ((self = [super initWithWindow:window]) != nil) {
@@ -34,16 +49,6 @@
 		self.volume = 0.;
 		self.iTunesLaunched = NO;
 		self.playerState = FLPlayerStateStopped;
-		
-		keyPathComputation = [[NSDictionary dictionaryWithObjectsAndKeys:
-									  [NSArray arrayWithObject:@"curTrackInfos"], @"curTrackAlbum",
-									  [NSArray arrayWithObject:@"curTrackInfos"], @"curTrackArtist",
-									  [NSArray arrayWithObject:@"imagePlayButton"], @"playerState",
-									  [NSArray arrayWithObject:@"trackTimeDisplay"], @"playPosition",
-									  [NSArray arrayWithObject:@"trackTimeDisplay"], @"trackLength",
-									  nil] retain];
-		for (NSString *key in keyPathComputation.allKeys)
-			[self addObserver:self forKeyPath:key options:NSKeyValueObservingOptionPrior context:NULL];
 	}
 	
 	return self;
@@ -51,12 +56,6 @@
 
 - (void)dealloc
 {
-	for (NSString *key in keyPathComputation.allKeys)
-		[self removeObserver:self forKeyPath:key];
-	
-	[keyPathComputation release];
-	
-	
 	self.sliderVolume = nil;
 	self.buttonPrevious = nil;
 	
@@ -167,17 +166,6 @@
 {
 	if (!self.hasPlayerPosition) return nil;
 	return [NSString stringWithFormat:@"%@%@%@", self.curTrackArtist, (self.curTrackArtist.length > 0 && self.curTrackAlbum.length > 0)? @" — ": @"", self.curTrackAlbum];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-	if ([[change objectForKey:NSKeyValueChangeNotificationIsPriorKey] boolValue]) {
-		for (NSString *key in [keyPathComputation objectForKey:keyPath])
-			[self willChangeValueForKey:key];
-	} else {
-		for (NSString *key in [keyPathComputation objectForKey:keyPath])
-			[self didChangeValueForKey:key];
-	}
 }
 
 @end

@@ -22,9 +22,6 @@ typedef enum FLiTunesPlayerState {
 
 @interface FLMainWindowController : NSWindowController <NSWindowDelegate> {
 	FLiTunesControllerProxy *iTunesController;
-	
-@private
-	NSDictionary *keyPathComputation;
 }
 
 @property(retain) IBOutlet NSSlider *sliderVolume;
