@@ -19,7 +19,7 @@
 		if (firstResponder == self.mainWindow /* If the first responder is not the main window we probably won't want to intercept the keys */ &&
 			 ([theEvent modifierFlags] & NSNumericPadKeyMask /* Arrow keys */ || [eventCharacters isEqualToString:@" "])) {
 			unichar keyChar = 0;
-			if ( [eventCharacters length] == 1 ) {
+			if ([eventCharacters length] == 1) {
             keyChar = [eventCharacters characterAtIndex:0];
 				switch (keyChar) {
 					case NSLeftArrowFunctionKey: {
