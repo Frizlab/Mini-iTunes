@@ -237,7 +237,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = FL;
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Frost Land";
 			};
 			buildConfigurationList = 7BB2D6071674D3E0008A2D80 /* Build configuration list for PBXProject "Mini iTunes" */;
@@ -340,12 +340,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -369,7 +369,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -395,6 +394,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mini iTunes/Mini iTunes-Prefix.pch";
 				INFOPLIST_FILE = "Mini iTunes/Mini iTunes-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.frostland.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = FL;
@@ -410,6 +410,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mini iTunes/Mini iTunes-Prefix.pch";
 				INFOPLIST_FILE = "Mini iTunes/Mini iTunes-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.frostland.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = FL;
