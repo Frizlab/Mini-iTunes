@@ -13,11 +13,11 @@
 
 - (void)sendEvent:(NSEvent *)theEvent
 {
-	if (theEvent.type == NSKeyDown) {
+	if (theEvent.type == NSEventTypeKeyDown) {
 		NSResponder *firstResponder = self.mainWindow.firstResponder;
 		NSString *eventCharacters = [theEvent charactersIgnoringModifiers];
 		if (firstResponder == self.mainWindow /* If the first responder is not the main window we probably won't want to intercept the keys */ &&
-			 ([theEvent modifierFlags] & NSNumericPadKeyMask /* Arrow keys */ || [eventCharacters isEqualToString:@" "])) {
+			 ([theEvent modifierFlags] & NSEventModifierFlagNumericPad /* Arrow keys */ || [eventCharacters isEqualToString:@" "])) {
 			unichar keyChar = 0;
 			if ([eventCharacters length] == 1) {
             keyChar = [eventCharacters characterAtIndex:0];
@@ -30,7 +30,7 @@
 					}
 					case NSRightArrowFunctionKey: {
 						FLiTunesControllerProxy *proxy = [FLiTunesControllerProxy new];
-						if ([theEvent modifierFlags] & NSCommandKeyMask) {
+						if ([theEvent modifierFlags] & NSEventModifierFlagCommand) {
 							[proxy setPlayHeadPositionToEnd];
 						} else {
 							[proxy setRelativePlayHeadPosition: [NSNumber numberWithInt:+10]];
